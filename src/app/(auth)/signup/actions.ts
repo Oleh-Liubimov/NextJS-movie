@@ -16,13 +16,6 @@ export async function SignUp(
   try {
     const { username, email, password } = signUpSchema.parse(credentials);
 
-    // const passwordHash = await hash(password, {
-    //   memoryCost: 19456,
-    //   timeCost: 2,
-    //   outputLen: 32,
-    //   parallelism: 1,
-    // });
-
     const passwordHash = await bcrypt.hash(password, 10);
     const userId = generateIdFromEntropySize(10);
 

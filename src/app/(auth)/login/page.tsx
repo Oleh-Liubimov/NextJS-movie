@@ -1,12 +1,7 @@
 import Link from "next/link";
-import SignUpForm from "./SignUpForm";
-import { Metadata } from "next";
-import loginImage from "@/assets/popcorn-clapper-cinematography.jpg";
+import SignInForm from "./SignInForm";
 import Image from "next/image";
-
-export const metadata: Metadata = {
-  title: "Sign up",
-};
+import loginImage from "@/assets/popcorn-clapper-cinematography.jpg";
 
 export default function Page() {
   return (
@@ -14,16 +9,16 @@ export default function Page() {
       <div className="flex h-full max-h-[40rem] w-full max-w-[64rem] overflow-hidden rounded-2xl bg-card">
         <div className="w-full space-y-10 overflow-y-auto p-10 md:w-1/2">
           <div className="space-y-1 text-center">
-            <h1 className="text-3xl font-bold">Sign up to next-movie</h1>
+            <h1 className="text-3xl font-bold">Log in to next-movie</h1>
             <p className="text-muted-foreground">App to found movies details</p>
           </div>
           <div className="space-y-5">
-            <SignUpForm />
+            <SignInForm />
             <Link
-              href="/login"
+              href="/signup"
               className="block cursor-pointer hover:underline text-center"
             >
-              Already have an account ? Log in
+              Don&apos;t have an account ? Sign up
             </Link>
           </div>
         </div>
